@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MoodQuotes</title>
+  <link rel="icon" href="https://emojiapi.dev/api/v1/rocket/64.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-yellow-100 to-blue-100 min-h-screen flex flex-col items-center justify-center p-6">
+
+  <div class="text-center mb-6">
+    <h1 class="text-4xl font-bold text-gray-800 animate-bounce">🧠 MoodQuotes</h1>
+    <p class="text-gray-600">Kutipan sesuai suasana hatimu</p>
+  </div>
+
+  <!-- Mood Selector -->
+  <div class="flex gap-3 flex-wrap justify-center mb-6">
+    <button class="mood-btn bg-white shadow-md hover:shadow-lg px-4 py-2 rounded-lg text-2xl" data-mood="happy">😊</button>
+    <button class="mood-btn bg-white shadow-md hover:shadow-lg px-4 py-2 rounded-lg text-2xl" data-mood="sad">😔</button>
+    <button class="mood-btn bg-white shadow-md hover:shadow-lg px-4 py-2 rounded-lg text-2xl" data-mood="angry">😠</button>
+    <button class="mood-btn bg-white shadow-md hover:shadow-lg px-4 py-2 rounded-lg text-2xl" data-mood="calm">😌</button>
+    <button class="mood-btn bg-white shadow-md hover:shadow-lg px-4 py-2 rounded-lg text-2xl" data-mood="motivated">🚀</button>
+  </div>
+
+  <!-- Quote Box -->
+  <div id="quoteBox" class="max-w-xl bg-white shadow-lg rounded-xl p-6 text-center transition-all duration-500 opacity-0 scale-95">
+    <p id="quoteText" class="text-lg italic text-gray-700">Pilih mood dulu ya...</p>
+    <p id="quoteAuthor" class="mt-4 text-gray-500"></p>
+    <button id="saveFav" class="mt-4 px-3 py-1 text-sm rounded bg-pink-500 text-white hover:bg-pink-600 transition">❤️ Simpan ke Favorit</button>
+  </div>
+
+  <!-- Action Buttons -->
+  <div class="flex gap-4 mt-6">
+    <button id="nextQuote" class="px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition hidden">
+      Kutipan Selanjutnya
+    </button>
+    <button id="showFavorites" class="px-4 py-2 bg-gray-600 text-white rounded-lg shadow hover:bg-gray-700 transition">
+      ❤️ Lihat Favorit
+    </button>
+  </div>
+
+  <!-- Favorites List -->
+  <div id="favoritesList" class="mt-8 max-w-xl w-full hidden">
+    <h2 class="text-xl font-semibold text-gray-800 mb-2">❤️ Kutipan Favorit</h2>
+    <ul id="favContainer" class="bg-white rounded-lg shadow p-4 space-y-2 text-gray-700 text-sm max-h-64 overflow-y-auto"></ul>
+  </div>
+
+  <!-- Footer -->
+  <div class="mt-10 text-sm text-gray-500">by Wim 🚀</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
