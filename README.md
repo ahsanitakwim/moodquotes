@@ -15,6 +15,10 @@ MoodQuotes adalah aplikasi web sederhana namun powerful yang menampilkan kutipan
 
 ---
 
+## 🌐 Live Demo
+
+👉 [Coba Aplikasinya di Sini](https://ahsanitakwim.github.io/moodquotes/)
+
 ## 🛠️ Cara Menjalankan di Lokal
 
 1. Clone repositori ini:
